@@ -1189,6 +1189,9 @@
   (is (= (get "0123" nil :not-found) :not-found))
   (is (= (get #js [0 1 2 3] nil :not-found) :not-found)))
 
+(deftest test-cljs-1991
+  (is (= (let [😀 1] 😀) 1)))
+
 (comment
   ;; ObjMap
   ;; (let [ks (map (partial str "foo") (range 500))
